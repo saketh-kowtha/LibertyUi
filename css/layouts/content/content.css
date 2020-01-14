@@ -1,0 +1,153 @@
+/* DOCUMENT INFORMATION
+	- Document: Article Style Sheet
+	- Author:   Kowtha Saketh   
+*/
+
+@import './modules/stats.css';
+@import './modules/graphs.css';
+@import './modules/table.css';
+@import './modules/current_updates.css';
+@import './modules/manage_tickets.css';
+
+#article{
+    padding: 20px 200px;
+}
+
+
+.highcharts-plot-border {
+    margin: 0px !important;
+    padding: 0px !important;
+
+}
+.highcharts-credits{
+    display: none;
+}
+
+
+.border{
+    border-color: rgb(221, 221, 221);
+    border-width: .6px;
+}
+
+
+.button{
+    padding: 5px 10px;
+    color: white;
+    border: 2px solid #4e4DE8;
+    background-color: #4E4DE8;
+    /* border: none; */
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.button:active{
+    border: 2px solid rgb(111, 111, 219);
+    transition: .2s;
+}
+
+
+.manageTickets{
+    width: 100%;
+    background-color: white;
+    border: 1px solid #d6d6d6;
+    margin-top: 20px;
+}
+
+/*Mobiles*/
+@media only screen and (max-width: 760px) {
+    #article{
+        padding: 5px;
+    }
+
+    .graph-element{
+        width: 100% !important;
+    }
+
+    .graph-element:not(:first-child):not(:last-child){
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    #article > .stats{
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .graphs{
+        flex-wrap: wrap;
+    }
+
+    .current-updates-container{
+        flex-direction: column;
+    }
+
+
+    .current-chart {
+        width: calc(100%) !important;
+    }
+    
+    .current-updates {
+        width: calc(100% - 40px) !important;
+    }
+
+    .current-updates > div{
+        padding: 10px !important;
+    }
+
+    #article > .stats > .stat-element{
+        padding: 20px 10px;
+        width: calc((100% - 42px)/2);
+    }
+
+    .manage-tickets > .ticket{
+        padding: 20px 0px;
+        display: flex ;
+        flex-direction: column !important;
+    }
+
+    .manage-tickets  > .ticket > div{
+        margin: 0px auto;
+    }
+
+    .ticket > div > p{
+        text-align: center;
+        line-height: normal;
+    }
+
+    .ticket > div > div:last-child{
+        float: right;
+    }
+
+    .ticket > div{
+        padding: 5px;
+    }
+}
+
+/*Tablets*/
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+    #article{
+        padding: 20px;
+    }
+
+    #article > .stats{
+        width: 100%;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+    .graphs > .graph-element:not(:first-child):not(:last-child){
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #article > .stats > .stat-element{
+        padding: 20px 10px;
+        width: calc(100% - 20px);
+    }
+
+
+}
