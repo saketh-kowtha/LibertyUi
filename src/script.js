@@ -54,7 +54,9 @@ $(document).ready(function() {
     $(".tag:contains(Pending)").css("background-color", "#ff6f59")
     $(".tag:contains(Rejected)").css("background-color", "#db504a")
 
-
+    $("#profile").click(function () {
+        $("#logo").click()
+    })
     
  });
 
